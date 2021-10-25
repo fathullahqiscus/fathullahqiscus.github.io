@@ -52,9 +52,15 @@ var x = setInterval(function() {
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-    // If the count down is over, write some text 
+    // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+message = "Fathul & Ririn Wedding Invitation ";
+function step() {
+    message = message.substr(1) + message.substr(0,1);
+    document.title = message.substr(0,15);
+}
